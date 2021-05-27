@@ -1,14 +1,12 @@
-1. Two Sum 
-
-class Solution { 
+// 1. Two Sum
 
     public int[] twoSum(int[] nums, int target) { 
 
-        int[] number= new int[2]; 
+        int[] ans= new int[2];
 
-    label: for (int i=0;i<nums.length-1;i++){ 
+        for (int i=0; i<nums.length-1; i++){
 
-            for (int j=i+1;j<=nums.length;j++){ 
+            for (int j=i+1; j<nums.length; j++){
 
                 if(nums[i]+nums[j]==target){ 
 
@@ -16,16 +14,12 @@ class Solution {
 
                    number[1]=j; 
 
-                    break label; 
+                    break;
 
                 } 
 
             } 
 
         } 
-
-        return number; 
-
-    } 
-
-} 
+        return ans;
+    }
